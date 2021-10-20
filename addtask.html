@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Add Task</title>
+</head>
+<body>
+    <h3>Add Task</h3>
+    
+    <form action="list_task.html">
+        <label for="taskName">Task Name(*) </label>
+        <input type="text" name="taskName" id="taskName" required>
+        
+        <br/>
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="3"></textarea>
+        <br/>
+        <label for="dueDate">Deadline Date</label>
+        <input type="date" name="dueDate" id="dueDate" 
+        value="2021-10-20" min="2021-10-20" max="2021-10-22" >
+
+        <!-- <input type="time" name="dueTime" id="dueTime" min="09:00:00" 
+        max="17:00:00" required> -->
+
+
+        <select id="dueTime">
+            <option value="" disabled>---SELECT Time --</option>
+            <option value="11:00:00">11 AM</option>
+            <option value="15:00:00">3 PM</option>
+        </select>
+        
+        <br/>
+        <label>Priority(*)</label>
+        <select id="priority" required>
+            <option value="L" selected>Low</option>
+            <option value="M">Medium</option>
+            <option value="H">High</option>
+        </select>
+        <br/>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
